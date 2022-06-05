@@ -220,13 +220,6 @@ else
 if(e->dir==1)
 {e->pos.x=e->pos.x-5;}
 }
-/*void displayAttack(enemy *e,SDL_Rect posPerso)
-{
-if(e->pos.x==posPerso.x)
-{e->dir=1;}
-if(e->pos.x==posPerso.x+180)
-{e->dir=0;}
-}*/
 void moveIA(enemy *e,SDL_Rect posPerso)
 {
  int dist;
@@ -238,17 +231,5 @@ void moveIA(enemy *e,SDL_Rect posPerso)
  }
   if(dist<0)
   {dist=-dist;}
- /*if (dist>0 ||dist<100)
- {
-  if(e->pos.x>posPerso.x)
- {
- e->a=1;
- }
- else 
- if(e->pos.x<posPerso.x)
- {
- e->a=2;
- }
- }*/
  updateEnnemiState(&(*e),dist);
 }
